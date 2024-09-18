@@ -244,10 +244,6 @@ theorem thm_13371 (x y : ℝ) (t : ℝ) (h₀ : y = 2 * x + 7) :
     (x = -3 ∧ y = -1 ∨ x = 0 ∧ y = 7 ∨ x = t ∧ y = 2 * x + 7) →
     (∃ t : ℝ, x = -3 ∧ y = -1 ∨ x = 0 ∧ y = 7 ∨ x = t ∧ y = 2 * x + 7) := by sorry
 
-theorem thm_13963 :
-    let prob := (21 : ℚ) / 55;
-    prob = 21 / 55 ∧ ∃ (p q : ℕ), p / q = prob ∧ Nat.Coprime p q ∧ p + q = 76 := by sorry
-
 theorem thm_14045 : ∃ (x : ℂ), x^3 + 3 * x^2 * Complex.I + 6 * x + 2 * Complex.I = 0 ∧
     x = -2 * Complex.I ∨ x = -1 + Complex.I ∨ x = -1 - Complex.I := by sorry
 
@@ -1066,9 +1062,6 @@ theorem thm_10908 : ∃ N : ℕ, (∃ P : ℕ → ℕ, (∀ n : ℕ, n ≤ 12 �
 theorem thm_12883 (p q r : ℝ) (h₀ : ∀ x, 3 * x = p + q * x + r) :
   p = 21 / 2 ∧ q = -3 / 2 ∧ r = 15 / 2 → p = 21 / 2 ∧ q = -3 / 2 ∧ r = 15 / 2 ∧ p > 0 ∧ q < 0 ∧ r > 0 := by sorry
 
-theorem thm_12937 (S : ℝ) (h₀ : S = ∑ i in Finset.range 90, (i + 1) / (i + 2)) :
-  S = 90 / 91 → S = 90 / 91 ∧ (∃ m n : ℕ, m / n = S ∧ Nat.Coprime m n ∧ m + n = 181) := by sorry
-
 theorem thm_13028 (x y : ℤ) (h₀ : 3 * x = 4 * y) (h₁ : x - y = 8) : max x y = 32 := by sorry
 
 theorem thm_13749 (f : ℝ → ℝ) (t₁ t₂ t₃ : ℝ) (h₀ : ∀ x, f x = (x - t₁) * (x - t₂) * (x - t₃))
@@ -1778,11 +1771,6 @@ theorem thm_8297 (a b c : ℕ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < b + c �
     (h₁ : a + b + c = 40) (h₂ : a * (b + c - a) * (c + a - b) = 1296) :
     ∃ (a b c : ℕ), a + b + c = 40 ∧ a * (b + c - a) * (c + a - b) = 1296 ∧ 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < b + c ∧ 0 < a + c ∧ 0 < a + b := by sorry
 
-theorem thm_8611 :
-  let r₁ := 5; let r₂ := 5; let r₃ := 8;
-  ∃ r₄ : ℚ, (r₁ = 5 ∧ r₂ = 5 ∧ r₃ = 8 ∧ r₄ = 8 / 9) ∧
-    (∃ m n : ℕ, r₄ = m / n ∧ Nat.Coprime m n ∧ m + n = 17) := by sorry
-
 theorem thm_8823 (N : ℕ) (h₀ : 19999 * N % 10000 = 2007) : N % 10000 = 7993 := by sorry
 
 theorem thm_9759 :
@@ -1899,10 +1887,6 @@ theorem thm_18257 (t : ℕ) (h₀ : t = 60) :
   ∀ (p : ℕ), p > 10 → ∀ (k : ℕ), k = t / 2 → ∀ (r : ℕ), r = p - 10 → ∀ (s : ℕ), s = 2 * r →
     (p * k + r * k + s * k) = 60 * p → p = 20 → p + k + s = 60 := by sorry
 
-theorem thm_18425 :
-  let r := (6 : ℝ) / 5;
-  r = 6 / 5 ∧ ∃ (m n : ℕ), m.Coprime n ∧ r = m / n ∧ m + n = 11 := by sorry
-
 theorem thm_18609 :
     let θ₁ := Real.pi / 2;
     let θ₂ := Real.pi / 2;
@@ -1924,25 +1908,6 @@ theorem thm_19359 (l w : ℝ) (h₀ : l * 25 = 1000) (h₁ : (2 * l + 2 * w) * 1
 
 theorem thm_19873 (m n : ℝ) (h₀ : ∃ (A B C D E F : ℝ), A = 12 ∧ B = 10 ∧ C = 14 ∧ D = 8 ∧ E = 6 ∧ F = 210 ∧ m = 17 ∧ n = 7 ∧ m + n = 24) :
   ∃ (FC BF : ℝ), FC / BF = 17 / 7 ∧ m + n = 24 := by sorry
-
-theorem thm_19953 (m n : ℕ) (h₀ : ∃ (A B C D E F : ℝ × ℝ),
-  A = (0, 0) ∧ B = (b, 2) ∧ C = (b + 2, 4) ∧ D = (8, 0) ∧ E = (8, 6) ∧ F = (0, 6) ∧
-  (C - B) • (D - E) = 0 ∧ (D - B) • (E - F) = 0 ∧ (E - C) • (F - A) = 0 ∧
-  A ≠ B ∧ B ≠ C ∧ C ≠ D ∧ D ≠ E ∧ E ≠ F ∧ F ≠ A ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc A F → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc B E → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc C D → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc D E → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc E F → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc F A → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc A B → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc B C → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc C D → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc D E → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc E F → x ≠ (0, 0)) ∧
-  (∀ (x : ℝ × ℝ), x ∈ Set.Icc F A → x ≠ (0, 0)) →
-  (∃ (m n : ℕ), (m : ℝ) / n = 48 / 35 ∧ n ≠ 0 ∧ Nat.Coprime m n)) :
-  (∃ (m n : ℕ), (m : ℝ) / n = 48 / 35 ∧ n ≠ 0 ∧ Nat.Coprime m n) := by sorry
 
 theorem thm_21507 (A B C : Type) [Fintype A] [Fintype B] [Fintype C] (h : Fintype.card A ≥ 2)
     (h₁ : Fintype.card B ≥ 2) (h₂ : Fintype.card C ≥ 2) :
@@ -2210,14 +2175,8 @@ theorem thm_13840 (k : ℕ) (hk : k ≥ 2) :
     ∀ (n : ℕ), n ≥ k → (∀ (a : ℕ), a ∈ Finset.range n → a ≠ 0 → a ≠ a₁ → a ≠ a₂ → (a₁ / a + a₂ / a) ∈ Set.range (fun n => n : ℕ → ℕ)) →
     ∃ (m : ℕ), m ≥ k ∧ ∀ (a : ℕ), a ∈ Finset.range m → a ≠ 0 → a ≠ a₁ → a ≠ a₂ → (a₁ / a + a₂ / a) ∈ Set.range (fun n => n : ℕ → ℕ) := by sorry
 
-theorem thm_14164 :
-  let P := (27 / 125 : ℝ);
-  P = 27 / 125 ∧ (∃ a b : ℕ, a / b = P ∧ Nat.Coprime a b ∧ a + b = 152) := by sorry
-
 theorem thm_14873 (r s t : ℝ) (h₀ : r * s * t = 7) (h₁ : r + s + t = 20) (h₂ : r * s + s * t + t * r = 18)
   (h₃ : r * s * t = 7) : (1 + r) * (1 + s) * (1 + t) = 46 := by sorry
-
-theorem thm_15071 (p : ℕ) (hp : p.Prime) (hp' : p % 2 = 1) (S : ℕ → ℚ) (hS : ∀ a, S a = (a^(p-1) + 1) / (p-1)) {m n : ℕ} (h : S 3 + S 4 - 3 * S 2 = m / n) (hm : m % p = 0) : p ∣ m := by sorry
 
 theorem thm_15556 (p : ℝ) (r : ℝ) (h₀ : p * (1 + r / 100) = 100) (h₁ : p * (1 + r / 100) * (1 + r / 100) = 200) : r = 100 := by sorry
 
@@ -3027,10 +2986,6 @@ theorem thm_22290 (AB BC CA AD BD CD : ℝ) (h₀ : AB ^ 2 + BC ^ 2 + CA ^ 2 ≤
 theorem thm_23290 (x y : ℕ) (h₀ : (x : ℕ) % 16 = 7) (h₁ : (y : ℕ) % 16 = 11) :
   (x + y : ℕ) % 16 = 2 := by sorry
 
-theorem thm_23711 :
-  let r := (27 : ℝ) / 5;
-  r = 27 / 5 ∧ ∃ m n : ℕ, m.Coprime n ∧ r = m / n ∧ m + n = 32 := by sorry
-
 theorem thm_24152 (n : ℕ) :
   Nat.choose 8 3 = 56 → Nat.choose 8 2 = 28 → Nat.choose 6 2 = 15 →
   Nat.choose 6 2 * Nat.choose 4 1 * Nat.choose 2 1 = 720 →
@@ -3747,10 +3702,6 @@ theorem thm_16603 (n : ℤ) (h₀ : n ≥ 1) (h₁ : n ≤ 13) :
   let list_median := n + 10;
   list_mean = 11 → list_median = 10 → n = 1 := by sorry
 
-theorem thm_16813 (m n : ℕ) (h₀ : 0 < m ∧ 0 < n) (h₁ : m.Coprime n)
-  (h₂ : ∃ (A B : Finset ℕ), A.card = 6 ∧ B.card = 4 ∧ ∀ a ∈ A, ∀ b ∈ B, a ≠ b ∧ a.gcd b = 1) :
-  ∃ (m n : ℕ), 0 < m ∧ 0 < n ∧ m.Coprime n ∧ ∃ (A B : Finset ℕ), A.card = 6 ∧ B.card = 4 ∧ ∀ a ∈ A, ∀ b ∈ B, a ≠ b ∧ a.gcd b = 1 := by sorry
-
 theorem thm_17120 (a_n b_n : ℕ → ℝ) (h₀ : ∀ n, a_n (n + 1) ^ 2 - 2 * a_n n ^ 2 = a_n n * a_n (n + 1) + 3 * 2 ^ n * (a_n n + a_n (n + 1))) (h₁ : ∀ n, b_n n = -3 * n ^ 2 + 180) :
   (∃ S_n T_n : ℕ → ℝ, (∀ n, S_n n = 3 * n + 180) ∧ (∀ n, T_n n = 3 * 2 ^ n - 3)) := by sorry
 
@@ -4299,9 +4250,6 @@ theorem thm_21038 (p : ℝ) (h₀ : p > 0) :
 
 theorem thm_21424 (a b c : ℝ) (h₀ : a ≠ 0 ∨ b ≠ 0 ∨ c ≠ 0) (h₁ : a + b + c = 0) (h₂ : a * b + b * c + c * a = 0)
     (h₃ : a * b * c = -2) : a ^ 2 * b ^ 2 * c ^ 2 = 4 := by sorry
-
-theorem thm_21572 (h₀ : ∀ N : ℕ, N ≠ 0 → ∃ a b c : ℚ, a * N + b * (N ^ 2) + c * (N ^ 3) = 0) :
-  ∃ a b c : ℚ, a * 50 + b * 50 ^ 2 + c * 50 ^ 3 = 0 := by sorry
 
 theorem thm_21590 : 1023 ∈ Finset.filter (fun x => 33 ∣ x) (Finset.range (10000 : ℕ)) := by sorry
 
@@ -4929,9 +4877,6 @@ theorem thm_4647 :
     let d := (38 : ℝ) / 3;
     d = 38 / 3 ∧ ∃ m n : ℕ, m.gcd n = 1 ∧ d = m / n ∧ m + n = 38 + 3 := by sorry
 
-theorem thm_4725 (P0 P1 P2 P3 : ℝ) (h₀ : P0 = 1) (h₁ : P1 = 1/2) (h₂ : P2 = 45/64) (h₃ : P3 = 69/32) :
-    P3 = 69/32 ∧ ∃ m n : ℕ, m / n = P3 ∧ Nat.Coprime m n ∧ m + n = 69 + 32 := by sorry
-
 theorem thm_4766 (p : ℂ → ℂ) (h₀ : ∀ x : ℂ, p x = x^3 + a * x^2 + b * x + c) (h₁ : a = 0)
   (h₂ : b = -6) (h₃ : c = 9) (h₄ : p (3 - 2 * Complex.I) = 0) : p = fun x => x^3 - 6 * x + 9 := by sorry
 
@@ -5190,10 +5135,6 @@ theorem thm_19760 :
     (h₄ : ∀ (x y : ℝ) (h₅ : x^2 / a^2 + y^2 / b^2 = 1) (h₆ : x^2 / a^2 + y^2 / b^2 = 1),
       (x, y) = (2, 0) ∨ (x, y) = (-2, 0) ∨ (x, y) = (0, 2) ∨ (x, y) = (0, -2)),
     ∃ (M N : ℝ × ℝ), (M.1 = 2 ∧ M.2 = 0) ∨ (M.1 = -2 ∧ M.2 = 0) ∨ (M.1 = 0 ∧ M.2 = 2) ∨ (M.1 = 0 ∧ M.2 = -2) := by sorry
-
-theorem thm_20771 :
-  let sum := 159 / 323;
-  ∃ m n : ℕ, 0 < m ∧ 0 < n ∧ Nat.Coprime m n ∧ (m / n : ℚ) = sum := by sorry
 
 theorem thm_21404 (x y : ℝ) :
   x = 2 * y - 2 → 3 * x - 4 * y = -1 → x = 1 → y = 1 → 2 * x - 4 * y = -1 := by sorry
@@ -7032,9 +6973,6 @@ theorem thm_4747 (a b : ℝ) (h₀ : a > 0 ∧ b > 0) (h₁ : ℕ) (h₂ : ℕ) 
 
 theorem thm_4779 : Nat.lcm (Nat.lcm 17 6) 2 = 102 ∧ 102 / 17 = 6 ∧ 102 / 6 = 17 ∧ 102 / 2 = 51 ∧ 51 ∣ 102 := by sorry
 
-theorem thm_4871 (ω₁ ω₂ : ℝ) (h₀ : ω₁ = 1) (h₁ : ω₂ = 3) :
-  ∃ (CX : ℝ), CX = 40 / 3 ∧ ∃ (m n : ℕ), m.Coprime n ∧ CX = m / n ∧ m + n = 43 := by sorry
-
 theorem thm_4959 (n : ℕ) (h₀ : 1 ≤ n ∧ n ≤ 9)
     (h₁ : (8 * 1000000 + 5 * 100000 + 4 * 10000 + n * 1000 + 5 * 100 + 2 * 10 + 6) % 11 = 0) :
     n = 5 := by sorry
@@ -7063,9 +7001,6 @@ theorem thm_5478 (A B C D : ℝ) (h₀ : ∀ x y z : ℝ, x ^ 2 + y ^ 2 + z ^ 2 
   ∀ d : ℝ, d = x - a → d = y - b → d = z - c → d = 0 := by sorry
 
 theorem thm_5582 : Real.log (1 / 3) / Real.log 3 = -1 := by sorry
-
-theorem thm_5661 (f : ℝ → ℝ) (h₀ : f = fun x => (1/2)*x + 1) :
-  (1,2) ∈ {(x, y) | y = f x / 2} → (4, 1/2) ∈ {(x, y) | y = f⁻¹ x / 2} → 4 + 1/2 = 9/2 := by sorry
 
 theorem thm_5899 (a b c y₁ y₂ : ℝ) (h₀ : a ≠ 0) (h₁ : y₁ = a * 1 ^ 2 + b * 1 + c)
     (h₂ : y₂ = a * (-1) ^ 2 + b * (-1) + c) (h₃ : y₁ - y₂ = -6) : b = -3 := by sorry
@@ -7417,10 +7352,6 @@ theorem thm_24592 :
 theorem thm_24762 (a b c : ℕ) (h₀ : 7 * (2 ^ n) - 1 = 3 ^ m) (h₁ : 7 * (2 ^ n) - 1 = 3 ^ m) :
   n = 3 ∧ m = 2 → 1001 * 121 = 144 := by sorry
 
-theorem thm_24947 :
-    (∃ x y : ℝ, x * (1 / 2 + y - 2 * x ^ 2) = 0 ∧ y * (5 / 2 + x - y) = 0) ↔
-      (0, 0) ∈ {(x, y) | x * (1 / 2 + y - 2 * x ^ 2) = 0 ∧ y * (5 / 2 + x - y) = 0} := by sorry
-
 theorem thm_24949 : ∀ (n : ℕ), n % 3 = 0 → (n + 2) % 3 = 2 ∧ (n + 5) % 3 = 2 := by sorry
 
 theorem thm_25208 (n : ℕ) (h₀ : 0 < n) (a₁ a₂ a₃ : ℕ → ℝ) (h₁ : ∀ i, 0 < a₁ i ∧ 0 < a₂ i ∧ 0 < a₃ i)
@@ -7490,8 +7421,6 @@ theorem thm_6 (a b : ℝ) (h₀ : 0 < a ∧ 0 < b)
     let G := (0, 0);
     let S := (a ^ 2 - b ^ 2) / (2 * a);
     S ∈ Set.Ici (1 / 2) := by sorry
-
-theorem thm_171 : ∃ p : ℚ, p = 3 / 34 ∧ ∃ m n : ℕ, m / n = p ∧ Nat.Coprime m n ∧ m + n = 37 := by sorry
 
 theorem thm_275 (qing : ℕ) (rayna : ℕ) (paolo : ℕ) (h₀ : qing = 2 * rayna)
     (h₁ : qing = paolo - 4) (h₂ : (paolo + qing + rayna) / 3 = 13) :
@@ -7672,10 +7601,6 @@ theorem thm_9360 (h₀ : ∀ (a b c d : ℝ), 3600 * d = 1 → 5 * d = 360 → �
     ∀ (a b c d : ℝ), 3600 * d = 1 → 5 * d = 360 → ∀ (e f g : ℝ),
     e + f + g = 360 → 180 * d = g → ∀ (h : ℝ), h = 180 - g → h = 54 := by sorry
 
-theorem thm_9411 : (∃ (m n : ℕ), (m ≠ 0) ∧ (n ≠ 0) ∧ (Nat.Coprime m n) ∧ (∑ k in Finset.range 4, k) = m / n) →
-    (∑ k in Finset.range 4, k) = 6 →
-    ∃ (m n : ℕ), (m ≠ 0) ∧ (n ≠ 0) ∧ (Nat.Coprime m n) ∧ (∑ k in Finset.range 4, k) = m / n := by sorry
-
 theorem thm_9661 (v : Fin 2 → ℝ) (h₀ : ∀ i, v i = 7 / 25 * (-24) + (-24) / 25 * 7) :
     (∀ i, v i = 4 / 25 * (-24) + (-24) / 25 * 7) → ∃ d : Fin 2 → ℝ, ∀ i, d i = 4 / 25 * (-24) + (-24) / 25 * 7 := by sorry
 
@@ -7711,9 +7636,6 @@ theorem thm_10861 (p : ℤ → ℤ → ℤ) (h₀ : ∀ a b, p a b = a^3 - a^2 *
 
 theorem thm_11400 (a b c : ℝ) (h₀ : 1 < a) (h₁ : 1 < b) (h₂ : 1 < c) (h₃ : a + b + c = 9)
     (h₄ : a * b + b * c + c * a ≤ 24) : a * b + b * c + c * a < 25 := by sorry
-
-theorem thm_11408 (m n : ℕ) (h₀ : 0 < m ∧ 0 < n) :
-  ∃ (p : ℚ), p = 3 / 34 ∧ (∃ (m n : ℕ), m < n ∧ p = m / n ∧ m.Coprime n) := by sorry
 
 theorem thm_11687 (n : ℕ) :
   ∀ (x : ℕ → ℝ) (S : Finset (ℕ × ℕ)),
@@ -7868,23 +7790,6 @@ theorem thm_17683 : ∀ (n : ℕ), n ≥ 1 → ∀ (F : ℕ → ℕ), F 1 = 1 �
   (∀ (n : ℕ), n ≥ 1 → F n = n) →
   (∑ k in Finset.range 2023, F k) = a - 1 := by sorry
 
-theorem thm_18657 (m n : ℕ) (h₀ : m < n) (h₁ : Nat.Coprime m n) :
-    let decimal := (1 + ∑ k in Finset.range 10, 10 ^ k);
-    let numerator := m;
-    let denominator := n;
-    ¬(denominator = 1 ∧ numerator = 1) →
-    ¬(denominator = 3 ∧ numerator = 1) →
-    ¬(denominator = 9 ∧ numerator = 1) →
-    ¬(denominator = 27 ∧ numerator = 1) →
-    ¬(denominator = 81 ∧ numerator = 1) →
-    ¬(denominator = 243 ∧ numerator = 1) →
-    ¬(denominator = 729 ∧ numerator = 1) →
-    ¬(denominator = 2187 ∧ numerator = 1) →
-    ¬(denominator = 6561 ∧ numerator = 1) →
-    ¬(denominator = 19683 ∧ numerator = 1) →
-    denominator = 19683 ∧ numerator = 1 →
-    denominator = 19683 ∧ numerator = 1 := by sorry
-
 theorem thm_19696 (x : ℕ) (h₀ : x > 0) (h₁ : x ≤ 213) :
   let fisherman1 := 213 * x;
   let fisherman2 := 30 + 60 + 93;
@@ -7949,10 +7854,6 @@ theorem thm_21445 (n : ℕ) (h₀ : n > 4) :
 
 theorem thm_21596 (m n : ℕ) (h₀ : m > 0 ∧ n > 0)
     (h₁ : ∃ A B : ℕ, A + B = m ∧ (A - 1) * (B - 1) = n) : 1 / 4 * m = n → m = 4 * n := by sorry
-
-theorem thm_21598 :
-  let p : ℚ := 40 / 243;
-  (∃ m n : ℕ, m / n = p ∧ Nat.Coprime m n ∧ m + n = 283) ∧ p = 40 / 243 := by sorry
 
 theorem thm_22422 :
     (∃ (m₁ m₂ : ℝ), m₁ * m₂ = -1 ∧ ∀ (x y : ℝ), x ^ 2 / a ^ 2 + y ^ 2 / b ^ 2 = 1 →
@@ -8329,8 +8230,6 @@ theorem thm_11230 :
 
 theorem thm_11258 (h₀ : ∀ n : ℕ, n > 0 → ∃ a b : ℤ, a * b ≥ 13 ∧ a * b ≤ 13 + 2 * n) :
   ∃ n : ℕ, n > 0 ∧ ∀ a b : ℤ, a * b ≥ 13 ∧ a * b ≤ 13 + 2 * n → n = 13 := by sorry
-
-theorem thm_11292 : ∃ n : ℕ, n < 1000 ∧ ∀ m : ℕ, ∀ x : ℤ, x ≠ 0 → (x - 1) * x * (x + 1) = 6 * m^2 → n = 181 := by sorry
 
 theorem thm_11463 (m : ℝ) (C : ℝ × ℝ) (l : ℝ × ℝ) (h₀ : C = (2, 0)) (h₁ : l = (0, 1)) (h₂ : m = 1) :
     (∃ t : ℝ, t ≥ 0 ∧ (C.1 + t * l.1, C.2 + t * l.2) = (2, 1)) → (∃ t : ℝ, t ≥ 0 ∧ (C.1 + t * l.1, C.2 + t * l.2) = (2, 1)) →
@@ -9157,8 +9056,6 @@ theorem thm_16074 (a b c : ℝ) (h₀ : 0 < b) (h₁ : b * Real.sin ((B + C) / 2
 
 theorem thm_16114 (C : Type) [Field C] (a b c : ℝ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c) (h₁ : a ^ 2 + b ^ 2 = c ^ 2) (h₂ : a ≤ b ∧ a ≤ c) (h₃ : b ≤ a ∧ b ≤ c) (h₄ : c ≤ a ∧ c ≤ b) : a + b - c = 2 := by sorry
 
-theorem thm_16195 : ∃ (n : ℕ), n ≥ 1 ∧ (∑ k in Finset.range n, 704 / 2^k) = 1984 - (∑ k in Finset.range n, -1984 / 2^k) → n = 5 := by sorry
-
 theorem thm_16622 (a b : ℕ → ℝ) (h₀ : ∀ n, a n = n + 1) (h₁ : ∀ n, b n = 2 ^ (n - 1)) :
     ∃ (a_n b_n : ℕ → ℝ), (∀ n, a_n n = 2 * n + 1) ∧ (∀ n, b_n n = 2 ^ n) := by sorry
 
@@ -9609,10 +9506,6 @@ theorem thm_6157 :
   ∀ {A B C D E F : ℝ}, A = C ∧ C = E ∧ E = G → B = F → F = D → D = B →
   (∃ θ : ℝ, θ = 110 ∧ θ ∈ Set.Icc (0 : ℝ) (180 : ℝ)) := by sorry
 
-theorem thm_6805 (m n : ℕ) (h₀ : 0 < m ∧ 0 < n) (h₁ : m.Coprime n) :
-    let X := fun k => (k : ℤ) ^ 2;
-    X m * X n = 288 → m = 18 ∧ n = 2 → (m * n) % 2007 = 0 := by sorry
-
 theorem thm_7142 (x y : ℕ) (h₀ : x + y = 100) (h₁ : x = 2 * y - 20) :
   x = 60 ∧ y = 40 := by sorry
 
@@ -9682,9 +9575,6 @@ theorem thm_9514 (b : ℕ) (h₀ : 3 ∣ b - 1) : ¬3 ∣ (b * 2 + 0) * 100 + (b
 
 theorem thm_9532 (n₁ n₂ : ℕ) (h₀ : n₁ + n₂ = 100) (h₁ : 8 * n₁ + 4 * n₂ = 680) :
     n₁ = 70 ∧ n₂ = 30 ∧ 8 * n₁ = 560 ∧ 4 * n₂ = 120 := by sorry
-
-theorem thm_9720 :
-  ∃ x_sum : ℝ, x_sum = 3 / 11 ∧ ∃ m n : ℕ, m.Coprime n ∧ x_sum = m / n ∧ m + n = 14 := by sorry
 
 theorem thm_9747 (a : ℝ) (h₀ : a > 0) :
     let f := fun x => a * x - x * Real.exp x;
@@ -9830,9 +9720,6 @@ theorem thm_15005 (a : ℝ) (h₀ : a = 1) :
 theorem thm_15009 (α β γ : ℝ) (h₀ : 0 < α ∧ 0 < β ∧ 0 < γ) (h₁ : α + β + γ = 180)
   (h₂ : α ≠ 0) (h₃ : β ≠ 0) (h₄ : γ ≠ 0) :
   ∃ (A B C : ℝ), A + B + C = 180 ∧ A ≠ 0 ∧ B ≠ 0 ∧ C ≠ 0 := by sorry
-
-theorem thm_15109 (f : ℝ → ℝ) (h₀ : f 1 = 2) (h₁ : f = fun x => (1/2) * f (x / 2)) :
-  (1,2) ∈ {(x, y) | y = f x / 2} → (1, 2) ∈ {(x, y) | y = f⁻¹ x / 2} → 1 + 2 = 3 := by sorry
 
 theorem thm_15576 : (∃ x : ℝ, 1 < 2 * x ∧ 2 * x < 2) ∧ (∃ x : ℝ, 1 < 3 * x ∧ 3 * x < 2) →
     (∃ x : ℝ, 1 < x ∧ x < 2) := by sorry
@@ -10003,9 +9890,6 @@ theorem thm_21831 :
 
 theorem thm_22071 (p : ℝ) (h₀ : ∀ (x : ℝ), p = sin x ^ 2 + cos x ^ 2 - sin x * cos x)
   (h₁ : 0 < p) : p = 1 - sin x * cos x := by sorry
-
-theorem thm_22681 (n : ℕ) (h₀ : n > 0) (h₁ : ¬∀ x : ℕ, x > 0 → x ≤ n → x.Coprime n) :
-  ∃ (x : ℕ), x > 0 ∧ x ≤ n ∧ ¬x.Coprime n := by sorry
 
 theorem thm_22733 (h₀ : 0 < Real.log 8) (h₁ : Real.log 8 > 0) :
   Real.log 8 / Real.log (1 / 8) = -1 := by sorry
@@ -10262,13 +10146,6 @@ theorem thm_1686 (h₀ : 10^93 - 93 ≠ 0) :
 
 theorem thm_1727 : Nat.factors 32 = [2, 2, 2, 2, 2] →
     (Finset.filter (fun x => x > 0) (Finset.filter (fun x => x ∣ 32) (Finset.range 33))).card = 6 := by sorry
-
-theorem thm_1879 :
-  let max_im := (Real.sqrt 19) / 2;
-  let m := 19;
-  let n := 2;
-  let sum := m + n;
-  Nat.Coprime m n ∧ sum = 21 := by sorry
 
 theorem thm_1900 (x y : ℕ) (h₀ : x + y = 20) (h₁ : 5 * x - 2 * y = 86) : x = 18 := by sorry
 
@@ -10692,15 +10569,6 @@ theorem thm_15949 :
   ∃ (g h : ℝ → ℝ), (∀ x, g (h x) = h (g x)) ∧ (∀ x, g x = x) ∧ (∀ x, h x = x) ∧ (∀ x, g x = x) ∧ (∀ x, h x = x) ∧ (∀ x, g x = x) ∧ (∀ x, h x = x) := by sorry
 
 theorem thm_15953 (n : ℕ) (h₀ : n ≥ 2) (a : ℕ → ℝ) (S : ℕ → ℝ) (h₁ : a 2 = 5) (h₂ : ∀ n, S n = ∑ i in Finset.range n, a i) (h₃ : ∀ n, 2 * S n / n = a n + 2) : ∃ T : ℕ → ℝ, ∀ n, T n = 4 + (3 * n - 4) * 2 ^ n := by sorry
-
-theorem thm_16742 (aₙ : ℕ → ℤ) (h : ∀ n, aₙ n = n^3 + b * n^2 + c * n + d) :
-    (∃ (b c d : ℤ), ∀ (n : ℕ), aₙ n = n^3 + b * n^2 + c * n + d → aₙ 2015 * aₙ 2016 = 0) ∧
-    (∀ (b c d : ℤ), ∃ (n : ℕ), aₙ n = n^3 + b * n^2 + c * n + d → aₙ 2015 * aₙ 2016 ≠ 0) →
-    ∃ (b c d : ℤ), ∀ (n : ℕ), aₙ n = n^3 + b * n^2 + c * n + d → aₙ 2015 * aₙ 2016 = 0 ∧
-      aₙ 2015 * aₙ 2016 = 0 → (b, c, d) = (0, 0, 0) := by sorry
-
-theorem thm_16957 (x y : ℝ) (h₀ : x + y = -1) (h₁ : x * y = 1) (h₂ : (x + y) ^ 2 = x ^ 2 + y ^ 2 + 2 * x * y) (h₃ : x ^ 2 + y ^ 2 + 2 * x * y = 1) :
-  x ^ 3 + a * x ^ 2 + b * x + c = 0 → a + b + c = -136 := by sorry
 
 theorem thm_17216 (a b : ℝ) (f : ℝ → ℝ) (h₀ : ∀ x, f x = a * x ^ 3 - b * x + 1)
     (h₁ : f (-2) = 1) : f 2 = 1 := by sorry
@@ -11604,10 +11472,6 @@ theorem thm_23098 :
     let P : ℕ → Prop := fun n => n < 2015 → ∃ (m : ℕ), m ≤ n ∧ (∀ (k : ℕ), k ≤ m → k ≠ 0 → ∃ (l : ℕ), l ≤ n ∧ k * l ≠ 0);
     P 0 → ∀ (n : ℕ), P n → n = 2015 → ∃ (m : ℕ), m ≤ n ∧ (∀ (k : ℕ), k ≤ m → k ≠ 0 → ∃ (l : ℕ), l ≤ n ∧ k * l ≠ 0) := by sorry
 
-theorem thm_23217 :
-  let r := (680 / 57 : ℚ)
-  r = 680 / 57 ∧ ∃ (m n : ℕ), m.Coprime n ∧ r = m / n ∧ m + n = 680 + 57 := by sorry
-
 theorem thm_23351 : ∃ CD : ℝ, ∃ AB : ℝ, ∃ AD : ℝ, ∃ BC : ℝ, CD / AB = 4 / 9 ∧ AD / AB = 5 / 9 ∧ BC / AB = 4 / 9 := by sorry
 
 theorem thm_23452 :
@@ -11826,8 +11690,6 @@ theorem thm_4294 (m n : ℕ) (h₀ : 0 < m ∧ 0 < n) :
     let y := (12 * 20 - 12 * m - 20 * n + m * n) / 2;
     x * y = 100 → m = 10 ∧ n = 15 → x * y = 100 := by sorry
 
-theorem thm_4355 : (∃ (m n : ℕ), (m ≠ 0) ∧ (n ≠ 0) ∧ (Nat.Coprime m n) ∧ (∑ k in Finset.range 4, k) = m / n) ∧ (∑ k in Finset.range 4, k) = 6 → (∃ (m n : ℕ), (m ≠ 0) ∧ (n ≠ 0) ∧ (Nat.Coprime m n) ∧ (∑ k in Finset.range 4, k) = m / n) := by sorry
-
 theorem thm_4681 :
     let S := Finset.range 11;
     let f : ℕ → ℕ := fun x => x + 1;
@@ -11893,17 +11755,6 @@ theorem thm_6994 (n : ℕ) :
   ∀ x : ℝ, f x = 1 / 11 → n = 10 → ∀ y : ℝ, f y = 1 / 11 → n = 10 → 1 / 11 ≤ f x → 1 / 11 ≤ f y → 1 / 11 ≤ f (1 / 11) := by sorry
 
 theorem thm_7058 (a b c d : ℕ) (h₀ : a + b + c = 43) (h₁ : d = 3) (h₂ : a * d = 28) (h₃ : b * d = 35) (h₄ : c * d = 45) : a * d * b * d * c * d = 129600 := by sorry
-
-theorem thm_7087 : ∀ {a b : ℕ}, a.Coprime b → Nat.gcd a b = 1 →
-  let area := a * b / 2;
-  let perimeter := 2 * (a + b);
-  let max_dissected_area := 98 - 49;
-  max_dissected_area = 49 →
-  ∃ (a b : ℕ), a.Coprime b ∧ Nat.gcd a b = 1 ∧
-    let area := a * b / 2;
-    let perimeter := 2 * (a + b);
-    let max_dissected_area := 98 - 49;
-    max_dissected_area = 49 := by sorry
 
 theorem thm_7373 (x : ℝ) (h₀ : 0 < x) :
     let f := fun x : ℝ => x * (1 / 2 + 2 / 3);
@@ -12274,9 +12125,6 @@ theorem thm_18767 (x : ℝ) (h₀ : x = 2 * (25 / 2)) (h₁ : x = 25) :
 theorem thm_19218 :
   let product := 8 * 10 ^ 8 * 10 * 10 ^ 10;
   (Nat.digits 10 product).length = 20 := by sorry
-
-theorem thm_19240 (n : ℕ) (h₀ : n > 1) :
-  ∀ (k : ℕ), (∀ (a : ℕ), a ∈ Finset.range n → a.Coprime (n + 1)) → k < n → k.Coprime (n + 1) := by sorry
 
 theorem thm_19653 (a : ℕ → ℕ) (h₀ : a 1 = 3) (h₁ : ∀ n, a (n + 1) = 3 * a n - 4 * n) :
   ∃ S : ℕ → ℕ, (∀ n, S n = (2 * n - 1) * 2 ^ (n + 1) + 2) := by sorry
@@ -12803,10 +12651,6 @@ theorem thm_9216 (a : ℕ → ℕ) (h₀ : ∀ n, a (n + 5) ^ 2 = a (n + 10))
 
 theorem thm_9276 (f : ℕ → ℕ) (h₀ : ∀ m n : ℕ, f^[n] m = f (f^[n - 1] m)) (h₁ : ∀ m n : ℕ, (f^[n] m - m) / n ∈ Set.Ici 0) (h₂ : Set.Finite (Set.Ici 1 \ {f n | n ∈ Set.Ici 1})) :
   ∀ n : ℕ, f n - n ∈ Set.Ici 0 := by sorry
-
-theorem thm_9285 :
-  let r := (680 / 57 : ℚ)
-  r = 680 / 57 ∧ ∃ (p q : ℕ), p.Coprime q ∧ r = p / q ∧ p + q = 680 + 57 := by sorry
 
 theorem thm_9389 : ¬ (∃ (a b c d : ℤ), a + b + c > 0 ∧ a + b + d > 0 ∧ a + c + d > 0 ∧ b + c + d > 0 ∧ a + b + c + d ≤ 0) := by sorry
 
@@ -13391,14 +13235,6 @@ theorem thm_2696 (a b c : ℝ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
     (h₁ : a ^ 3 + b ^ 3 + c ^ 3 - 3 * a * b * c = 0) :
     a ^ 3 + b ^ 3 + c ^ 3 = 3 * a * b * c := by sorry
 
-theorem thm_2702 (m n : ℕ) (h₀ : m.Coprime n) (h₁ : n ≠ 0) (h₂ : n ≠ 1) :
-    let area := 30;
-    let x := 12;
-    let y := 16;
-    let height := m / n;
-    let area_triangle := x * y * height / 2;
-    area_triangle = area ∧ m.Coprime n → m + n = 41 := by sorry
-
 theorem thm_2848 (k r : ℕ) (h₀ : k ≥ 66) (h₁ : r < 50) :
   let consumer_pays := 300 + (50 * k + r - 300) / 2;
   consumer_pays = 360 →
@@ -13701,9 +13537,6 @@ theorem thm_8045 :
   let set_1 := {x : ℝ | x = 0 ∨ x = -1/2 ∨ x = -5 ∨ x = -2.1}
   let set_2 := {x : ℝ | x = -1/2 ∨ x = 5.2 ∨ x = -5 ∨ x = 0}
   (set_1 ∪ set_2) = {x : ℝ | x = 0 ∨ x = -1/2 ∨ x = -5 ∨ x = -2.1 ∨ x = 5.2} := by sorry
-
-theorem thm_8056 (f : ℝ → ℝ) (h₀ : ∀ x, f x = 2 * x - 1) :
-    (1,2) ∈ {(x, y) | y = f x / 2} → (4, 1/2) ∈ {(x, y) | y = f⁻¹ x / 2} → 4 + 1/2 = 9/2 := by sorry
 
 theorem thm_8110 (x y z : ℝ) (h₀ : x = k * y ^ 3) (h₁ : y = m / Real.sqrt z)
     (h₂ : x = 3) (h₃ : z = 12) : x = 24 / 125 → z = 75 := by sorry
@@ -14409,10 +14242,6 @@ theorem thm_3819 (b c : ℝ)
 
 theorem thm_3858 : ∃ x : ℤ, x > 0 ∧ (x^2 + 2*x + 17) / (2*x + 5) = x + 7 / (2*x + 5) ∧ ∀ y : ℤ, y > 0 → y ≠ x → ¬(y^2 + 2*y + 17) / (2*y + 5) = y + 7 / (2*y + 5) → x = 2 := by sorry
 
-theorem thm_3904 :
-  (171 / 512 : ℚ) = (171 / 512 : ℚ) ∧
-  (∃ m n : ℕ, m / n = (171 / 512 : ℚ) ∧ Nat.Coprime m n ∧ m + n = 683) := by sorry
-
 theorem thm_3966 (a : ℕ → ℝ) (S : ℕ → ℝ) (h₀ : ∀ n, a n = 7 - 4 * n) (h₁ : ∀ n, S n = ∑ k in Finset.range n, a k) :
     (∀ n, a n = 7 - 4 * n) → (∀ n, S n = ∑ k in Finset.range n, a k) →
     (∃ T : ℕ → ℝ, ∀ n, T n = ∑ k in Finset.range n, 1 / (a k ^ 2 - 1)) →
@@ -14635,13 +14464,6 @@ theorem thm_10037 :
   (∃ x y : ℝ, (x - y + 2) * (3 * x + y - 4) = 0 ∧ (x + y - 2) * (2 * x - 5 * y + 7) = 0) →
   ∃ x y : ℝ, (x - y + 2) * (3 * x + y - 4) = 0 ∧ (x + y - 2) * (2 * x - 5 * y + 7) = 0 ∧
   (x - y + 2) * (3 * x + y - 4) = 0 ∧ (x + y - 2) * (2 * x - 5 * y + 7) = 0 := by sorry
-
-theorem thm_10268 : ∃ (a b c : ℕ), a > 1 ∧ b > 1 ∧ c > 1 ∧ a.Coprime b ∧ b.Coprime c ∧ c.Coprime a ∧
-  (∀ (x y z : ℕ), x * a + y * b + z * c = 2 * a * b * c → x = 0 ∧ y = 0 ∧ z = 0) →
-  (∀ (x y z : ℕ), x * a + y * b + z * c = 2 * a * b * c → x = 0 ∧ y = 0 ∧ z = 0) →
-  (2 * a * b * c - (a * b + b * c + c * a)) = 1 → (2 * a * b * c - (a * b + b * c + c * a)) = 1 →
-  (2 * a * b * c - (a * b + b * c + c * a)) = 1 → (2 * a * b * c - (a * b + b * c + c * a)) = 1 →
-  (2 * a * b * c - (a * b + b * c + c * a)) = 1 → (2 * a * b * c - (a * b + b * c + c * a)) = 1 := by sorry
 
 theorem thm_10301 :
   ∀ (x : ℤ) (P : Polynomial ℤ),
@@ -15110,9 +14932,6 @@ theorem thm_364 (a b c d : ℝ) (h₀ : a > 0 ∧ b > 0 ∧ c > 0 ∧ d > 0) (h�
     let S := a / b + b / c + c / d + d / a;
     S = 8 ∧ (a = 1 ∧ b = 1 ∧ c = 1 ∧ d = 1) → S = 8 := by sorry
 
-theorem thm_454 (A B : ℤ) (h₀ : 1 < A) (h₁ : ∀ n : ℕ, (∃ k : ℕ, A = k ^ 2) ∨ (∃ t : ℕ, A = t ^ 3))
-  (h₂ : A = B ^ 2 ∧ 1 < B) : (∃ n : ℕ, A = n ^ 3) ∨ ∃ n : ℕ, A = n ^ 2 := by sorry
-
 theorem thm_526 (x y : ℝ) (h₀ : x - y = 3) (h₁ : x + y = 31) : x = 17 := by sorry
 
 theorem thm_817 :
@@ -15402,10 +15221,6 @@ theorem thm_9796 :
 
 theorem thm_9799 : ∃ (n : ℕ), n ≤ 1000 ∧ ∀ (x : ℝ), ⌊x⌋ + ⌊2 * x⌋ + ⌊3 * x⌋ = n → n = 667 := by sorry
 
-theorem thm_9809 (b : ℝ) (h₀ : b ∈ Set.Icc (-17) 17) :
-    (∀ x, x ^ 4 + 25 * b ^ 2 = (4 * b ^ 2 - 10 * b) * x ^ 2) →
-    29 / 34 = 29 / 34 ∧ (∃ m n : ℕ, Nat.Coprime m n ∧ (m / n : ℝ) = 29 / 34) := by sorry
-
 theorem thm_10167 (h₀ : ∃ (A B C D E F G H : ℕ), A = B ∧ C = D ∧ E = F ∧ G = H ∧
     (C = 1 ∧ D = 1 ∨ C = 2 ∧ D = 2) ∧ E = 1 ∧ F = 1 ∨ E = 2 ∧ F = 2) :
     (∃ (G H : ℕ), G = 1 ∧ H = 1 ∨ G = 2 ∧ H = 2) := by sorry
@@ -15632,9 +15447,6 @@ theorem thm_16196 (x k : ℝ) (h₀ : x^2 - 16*x + k = (x - 8)^2) : k = 64 := by
 
 theorem thm_16350 (x : ℝ) (h₀ : 60 * x + 120 * (x / 3) = 360) : x = 18 / 5 := by sorry
 
-theorem thm_16570 :
-  ∃ r : ℚ, r = 8 / 9 ∧ ∃ m n : ℕ, m.Coprime n ∧ r = m / n ∧ m + n = 17 := by sorry
-
 theorem thm_16643 (P : ℝ × ℝ) (h₀ : P ∈ {P : ℝ × ℝ | 0 ≤ P.fst ∧ 0 ≤ P.snd ∧ P.snd / P.fst = 2 * Real.sqrt 2}) :
     P.fst = Real.sqrt 2 → P.snd = 2 * Real.sqrt 2 → ∃ A B : ℝ × ℝ, A ≠ B ∧ ∃ C : ℝ × ℝ, C ≠ A ∧ C ≠ B ∧
       A ∈ {P : ℝ × ℝ | 0 ≤ P.fst ∧ 0 ≤ P.snd ∧ P.snd / P.fst = 2 * Real.sqrt 2} ∧
@@ -15715,12 +15527,6 @@ theorem thm_19477 (n : ℕ) (h₀ : n ≤ 200) (h₁ : n ≥ 100) :
   let students := n;
   let rooms := n / 4;
   students - rooms = 20 ∧ rooms ≠ 0 → n = 120 := by sorry
-
-theorem thm_19526 :
-  let decimal := (1 / (2 : ℝ) + 1 / (5 : ℝ));
-  let reciprocal := 1 / decimal;
-  reciprocal = 5 / 7 →
-  (∃ (m n : ℕ), m / n = 5 / 7 ∧ Nat.Coprime m n ∧ m + n = 12) := by sorry
 
 theorem thm_19557 : ∀ (a b c : ℝ), 0 < a ∧ 0 < b ∧ 0 < c →
     min (min (⌊(a + b) / c⌋ + ⌊(b + c) / a⌋) (⌊(b + c) / a⌋ + ⌊(c + a) / b⌋))
@@ -15908,9 +15714,6 @@ theorem thm_21852 :
   let y : ℝ := 2;
   f x = y ∧ f (x + 1) = y ∧ f (x - 1) = y ∧ g x = y ∧ g (x + 1) = y ∧ g (x - 1) = y →
   floor x = 10 := by sorry
-
-theorem thm_22103 (a b : ℤ) (h : ∀ n : ℕ, n > 0 → (a * n ^ 3 + b * n) % n = 0) :
-    (∀ n : ℕ, n > 0 → (a * n ^ 3 + b * n) % n = 0) → ∃ P : ℤ × ℤ, ∀ n : ℕ, n > 0 → (P.fst * n ^ 3 + P.snd * n) % n = 0 := by sorry
 
 theorem thm_22132 (x : ℝ) (h₀ : 0 < x) (h₁ : x < 1) :
   (∃ y : ℝ, 0 < y ∧ y < 1 ∧ y = (1 / 8) * (1 / 2)) → (∃ y : ℝ, 0 < y ∧ y < 1 ∧ y = 0.125) := by sorry
@@ -16101,9 +15904,6 @@ theorem thm_26760 (d : ℕ) (h₀ : d ≥ 3) :
       (∃ f : ℕ × ℕ → ℕ, f ∈ groupAssignments)) := by sorry
 
 theorem thm_27026 (x y : ℕ) (h₀ : x = 3 * y) (h₁ : 2 * x + 2 * y = 96) : x * y = 432 := by sorry
-
-theorem thm_27113 : (∀ x : ℕ, x > 0 → ∃ a b : ℕ, a > 1 ∧ b > 1 ∧ a.Coprime b ∧ a ^ b + b ^ a ≡ 0 [MOD a + b]) →
-    (∃ x : ℕ, x > 0 ∧ ∀ a b : ℕ, a > 1 ∧ b > 1 ∧ a.Coprime b ∧ a ^ b + b ^ a ≡ 0 [MOD a + b] → x = 2) := by sorry
 
 theorem thm_27176 : ∃ t, ∀ (S : Finset ℕ) (hS : S.card = 2008), (∀ x ∈ S, x ≠ 0) →
     (∀ x ∈ S, x ≤ 2007) → (∀ x ∈ S, x ≠ 0) → (∀ x ∈ S, x ≤ 2007) → S.card = t → t = 1339 := by sorry
@@ -16614,9 +16414,6 @@ theorem thm_13016 (S : ℕ → ℝ) (h : ∀ n, S n = 2 * (n : ℝ) ^ 2 + 2 * (n
     (h₀ : ∀ n, a n = 2 * (n : ℝ) ^ 2 + 2 * (n : ℝ)) (h₁ : ∀ n, a n ≠ 0) (h₂ : ∀ n, S n ≠ 0)
     (h₃ : ∀ n, ∃ b : ℕ → ℝ, b n = (a n) / S n) :
     ∀ n, ∃ T : ℕ → ℝ, T n = 2 - (n + 2) * (1 / 2) ^ n := by sorry
-
-theorem thm_13084 (ω₁ ω₂ : ℝ) (h₀ : ω₁ = 1) (h₁ : ω₂ = 3) :
-  ∃ (CX : ℝ), CX = 40 / 3 ∧ ∃ (m n : ℕ), m.Coprime n ∧ CX = m / n := by sorry
 
 theorem thm_13221 :
   ∃ k : ℕ, 1 ≤ k ∧ k ≤ 10 ∧ (∃ x : ℕ, 1 ≤ x ∧ k * x % 12 = 3 * k % 12) ∧ 6 = 6 := by sorry
@@ -18595,9 +18392,6 @@ theorem thm_11259 (a : ℕ → ℝ) (h₀ : ∀ n, a (n + 3) = a (n + 2) + a (n 
 theorem thm_11279 (f : ℤ → ℤ) (h₀ : ∀ m n, f (f m + n) + f m = f n + f (3 * m) + 2014) :
   ∃ f : ℤ → ℤ, ∀ n, f n = 2 * n + 1007 := by sorry
 
-theorem thm_11842 :
-  (∃ (m n : ℕ), Nat.Coprime m n ∧ (m / n : ℚ) = 29 / 34) ∧ 29 + 34 = 63 := by sorry
-
 theorem thm_12105 (a b : ℤ) (h₀ : a % 2 = 1) (h₁ : b % 2 = 1) :
     (2 * a + b) % 2 = 1 := by sorry
 
@@ -19038,10 +18832,6 @@ theorem thm_23694 :
 theorem thm_23705 (a₁ : ℤ) (d : ℤ) (h₀ : a₁ + 4 * d = 5) (h₁ : a₁ + 5 * d = 9)
     (h₂ : a₁ + 6 * d = 13) : a₁ + a₁ + d + a₁ + 2 * d + a₁ + 3 * d = -20 := by sorry
 
-theorem thm_23747 (h₀ : ∀ a b : ℕ, 0 < a → 0 < b → Nat.Coprime a b →
-  ¬∃ a b : ℕ, 0 < a ∧ 0 < b ∧ Nat.Coprime a b ∧ a / b = 3 / 1 ∧ a * b = 4 * 3) :
-  ¬∃ a b : ℕ, 0 < a ∧ 0 < b ∧ Nat.Coprime a b ∧ a / b = 3 / 1 ∧ a * b = 4 * 3 := by sorry
-
 theorem thm_23753 (a b : ℤ) :
   (a % 8 = 5 ∧ b % 8 = 3) → (a + b) % 8 = 0 := by sorry
 
@@ -19250,14 +19040,6 @@ theorem thm_2050 (a b : ℕ) (h₀ : a ∈ Finset.range 40) (h₁ : b ∈ Finset
 
 theorem thm_2234 :
   ∃ (max_area : ℝ), max_area = 820 ∧ ∃ (AB BC AC : ℝ), AB = 9 ∧ BC / AC = 40 / 41 ∧ max_area = 820 := by sorry
-
-theorem thm_2275 : ∃ (sum_possible_areas : ℝ),
-  sum_possible_areas = 52 / 15 ∧ ∃ (m n : ℕ),
-  m.Coprime n ∧ sum_possible_areas = m / n ∧ m + n = 67 := by sorry
-
-theorem thm_2278 :
-    let S := { (x, y) | (x = 1 ∧ y = 7) ∨ (x = 3 ∧ y = 7) ∨ (x = 1 ∧ y = 4) };
-    S = {(1, 7)} ∪ {(3, 7)} ∪ {(1, 4)} := by sorry
 
 theorem thm_2325 (h : 0 < Real.log 8) :
     Real.log 8 / Real.log (1 / 8) = -1 := by sorry
@@ -20156,8 +19938,6 @@ theorem thm_23586 (S : Finset ℕ) (h₀ : S = {1, 2, 3, 4, 5, 6}) (h₁ : S.car
     T.card = 6 ∧ (∑ x in T, x) = 11700 →
     (∑ x in T, x) = 11700 ∧ T.card = 6 := by sorry
 
-theorem thm_23780 : (29 / 34 : ℝ) = 29 / 34 ∧ (∃ m n : ℕ, Nat.Coprime m n ∧ (m / n : ℝ) = 29 / 34) := by sorry
-
 theorem thm_23829 :
   ∀ N : ℕ, N ∈ Set.range (fun n : ℕ => 2 * n + 1) → ¬ 2 * N + 1 = 1 := by sorry
 
@@ -20226,11 +20006,6 @@ theorem thm_25604 (x : ℝ) (h₀ : x / 4 + x / 20 = x / 10 + 2) : x = 10 := by 
 theorem thm_25673 (a b : ℝ) (h₀ : 0 < a) (h₁ : 0 < b) (h₂ : a > b)
     (h₃ : (x ^ 2) / a ^ 2 + (y ^ 2) / b ^ 2 = 1) (h₄ : a = Real.sqrt 3) (h₅ : b = 1 / 2) :
     (x ^ 2) / 3 + (y ^ 2) / (1 / 4) = 1 := by sorry
-
-theorem thm_26050 (n : ℕ) (h₀ : n > 6) :
-  (∀ a : ℕ, (a > 0) → a ≤ n - 1 → Nat.Coprime a n) →
-  (∀ a : ℕ, (a > 0) → a ≤ n - 1 → a + (n - 1) = n * (n - 1) / 2) →
-  (n = 13) → (∀ a : ℕ, (a > 0) → a ≤ n - 1 → a + (n - 1) = n * (n - 1) / 2) := by sorry
 
 theorem thm_26155 : ∀ a b : ℝ, a > 0 ∧ b > 0 → (a + b) / 2 ≥ 2 * a * b → (a + b) / 2 ≠ a * b := by sorry
 
@@ -21222,10 +20997,6 @@ theorem thm_20272 :
     let m_n : ℕ × ℕ := (30, 45);
     a_k m_n.fst + a_k m_n.snd = 1 / 29 → m_n.fst + m_n.snd = 840 := by sorry
 
-theorem thm_20366 (P : ℝ × ℝ × ℝ) (a b c : ℝ) (h₀ : P ∈ { (x, y, z) | x + y + z = a ∧ x^2 + y^2 + z^2 = b^2 ∧ x^3 + y^3 + z^3 = c^3 })
-    (h₁ : a ≠ 0 ∧ b ≠ 0 ∧ c ≠ 0) :
-    ∃ (P' : ℝ × ℝ × ℝ), P' ∈ { (x, y, z) | x + y + z = a ∧ x^2 + y^2 + z^2 = b^2 ∧ x^3 + y^3 + z^3 = c^3 } := by sorry
-
 theorem thm_20458 (x : ℝ) (h₀ : x / 6 + x / 9 = 5) : x = 18 := by sorry
 
 theorem thm_20588 (x : ℝ) (h₀ : x > 0)
@@ -21627,9 +21398,6 @@ theorem thm_839 (x₁ y₁ x₂ y₂ : ℝ) (h₀ : x₁ * y₁ * x₂ * y₂ = 
 
 theorem thm_848 (AB BC CD DA AC DE_intersect BE : ℝ) (h₀ : AB = 8) (h₁ : BC = 9) (h₂ : CD = 4) (h₃ : DA = 10) (h₄ : AC = 7) (h₅ : DE_intersect = 10) (h₆ : BE = 9) (h₇ : ∃ (E : ℝ), ∃ (F : ℝ), E = 2 * F) (h₈ : ∃ (H : ℝ), ∃ (F : ℝ), H = 1 / 2 * F) (h₉ : ∃ (G : ℝ), ∃ (F : ℝ), G = 1 / 2 * F) (h₁₀ : ∃ (E : ℝ), ∃ (F : ℝ), E = 2 * F) : ∃ (F : ℝ), ∃ (E : ℝ), ∃ (H : ℝ), ∃ (G : ℝ), ∃ (F' : ℝ), F = 2 * F' ∧ E = 2 * F' ∧ H = 1 / 2 * F' ∧ G = 1 / 2 * F' := by sorry
 
-theorem thm_851 (scores : List ℝ) (h₀ : scores = [82, 89, 78, 92, 92, 65, 81]) :
-    (List.countP (fun x => x > (List.sum scores / scores.length)) scores) / scores.length = 4 / 7 := by sorry
-
 theorem thm_872 (m n : ℝ) (f : ℝ → ℝ) (h₀ : ∀ x, f x = (m * x - n) / x - Real.log x)
   (h₁ : n = 1) : m = 1 ∧ 0 < x₁ ∧ x₁ < x₂ → x₁ + x₂ > 2 := by sorry
 
@@ -21861,9 +21629,6 @@ theorem thm_5128 (A B : ℕ) (hA : A = 7) (hB : B = 7) :
 theorem thm_5140 (x : ℕ) (h₀ : 24 * x + 16 * x = 800) : x = 20 := by sorry
 
 theorem thm_5187 (x : ℝ) (h₀ : 8 * (18 * (x / 100)) = 72) : x = 50 := by sorry
-
-theorem thm_5189 : (47666 / 55973 : ℚ) = 47666 / 55973 ∧
-  (∃ a b : ℕ, a.Coprime b ∧ (a / b : ℚ) = 47666 / 55973) := by sorry
 
 theorem thm_5191 (N : ℕ) :
   let two_by_six_grid := Nat.choose 8 2 * Nat.choose 6 6;
@@ -22774,9 +22539,6 @@ theorem thm_24355 (apple_boxes : ℝ) (pear_boxes : ℝ) (orange_boxes : ℝ)
     (h₂ : pear_boxes = (3/5) * orange_boxes) :
     orange_boxes = 25 := by sorry
 
-theorem thm_24599 (m n : ℕ) (h₀ : m.Coprime n) (h₁ : 0 < m) (h₂ : 0 < n) (h₃ : ∀ p : ℕ, p ∣ m ∧ p ∣ n → p = 1) :
-  ∃ (M N : ℕ), M.Coprime N ∧ 0 < M ∧ 0 < N ∧ ∀ (p : ℕ), p ∣ M ∧ p ∣ N → p = 1 := by sorry
-
 theorem thm_24676 (x y : ℕ) (h₀ : x * 10 + y = 2 * (y * 10 + x) + 2) (h₁ : x < 10) (h₂ : y < 10) (h₃ : x ≠ 0) :
     x + y = 7 := by sorry
 
@@ -23241,10 +23003,6 @@ theorem thm_5311 (δ ϕ : ℝ → ℝ) (x : ℝ) (h₀ : δ = fun y => 3 * y + 8
 theorem thm_5419 : ∃ (C : ℝ), ∀ (x y : ℝ), y ^ 2 = 3 * x ∧ 3 * x = y ^ 2 ∧
     (x - 2) ^ 2 + (y - 1) ^ 2 = 13 ∧ y = 3 * x + 2 ∧ y = 3 * x + 2 → C = 4 * Real.sqrt 13 / 3 := by sorry
 
-theorem thm_5456 :
-  ∀ {M : Finset ℕ} {n k : ℕ} (_ : n.Coprime k) (_ : k < n) (_ : M = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}),
-    (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) → (∀ i ∈ M, i ≠ k → (i + (n - i) = k)) := by sorry
-
 theorem thm_5563 (m : ℝ) :
   let B_probability := m;
   let C_probability := 1 - m;
@@ -23318,8 +23076,6 @@ theorem thm_6713 (n : ℕ) (h₀ : n = 9) :
   n = 9 := by sorry
 
 theorem thm_6822 (a b : ℕ) (h₀ : a + b = 10) (h₁ : 2 * a + 3 * b = 26) : a = 4 := by sorry
-
-theorem thm_6904 : ∃ k : ℕ, k > 0 ∧ (∀ m : ℕ, m > 0 → (7 / 51 : ℚ) = (2 / k + 3 / k ^ 2 : ℚ) → k = 16) := by sorry
 
 theorem thm_6964 (a b : ℝ) (h₀ : a ^ 2 + b ^ 2 = 1) (h₁ : a * b + a * b = 1) :
     a ^ 2 + b ^ 2 + 2 * a * b = 2 := by sorry
@@ -23886,10 +23642,6 @@ theorem thm_19220 (x y : ℕ) (h₀ : x + y = 11) (h₁ : 2 * x + 3 * y = 26) : 
 theorem thm_19228 (D B C A : ℝ) (h₀ : 0 < A ∧ 0 < B ∧ 0 < C ∧ 0 < D) (h₁ : A < B ∧ C < D) (h₂ : A + B = C + D) (h₃ : A * B = C * D) (h₄ : A * D = B * C) :
   ∃ (K : ℝ), ∃ (L : ℝ), ∃ (M : ℝ), ∃ (N : ℝ), K < L ∧ M < N ∧ K * L = M * N ∧ K * N = L * M := by sorry
 
-theorem thm_19446 :
-  ∃ (n : ℕ), n ≥ 1 ∧ (∑ i in Finset.range n, 704 / 2 ^ i) = 1984 - (∑ i in Finset.range n, -1984 / 2 ^ i) →
-  n = 5 := by sorry
-
 theorem thm_19595 (a1 a2 a3 an : ℝ) (h₀ : a1 ≥ a2) (h₁ : a2 ≥ a3) (h₂ : a3 ≥ 0) :
     a1 + a2 + a3 + an = 1 → a1 ^ 2 + 3 * a2 ^ 2 + 5 * a3 ^ 2 + (2 * n - 1) * an ^ 2 ≤ 1 →
     n ≥ 2 → ∃ a1 a2 a3 an : ℝ, a1 ≥ a2 ∧ a2 ≥ a3 ∧ a3 ≥ 0 ∧
@@ -24345,8 +24097,6 @@ theorem thm_3176 (T : ℕ) (u : ℕ → ℕ) (h₀ : T = 7) (h₁ : u 3 = 5) (h�
 theorem thm_3205 (x : ℝ) (h₀ : 0 ≤ x) (h₁ : x ≤ 180)
     (h₂ : (Real.tan (120 - x)) = (Real.sin 120 - Real.sin x) / (Real.cos 120 - Real.cos x)) :
     ∃ (x : ℝ), 0 ≤ x ∧ x ≤ 180 ∧ x = 100 := by sorry
-
-theorem thm_3228 : ∃ (x₅₀ : ℚ), x₅₀ = 75 / 98 ∧ ∃ (m n : ℕ), m.Coprime n ∧ x₅₀ = m / n := by sorry
 
 theorem thm_3341 :
     (∃ y : ℤ, (∃ x : ℤ, x ^ 2020 + y ^ 2 = 2 * y) ∧ y = 0 ∨ y = 1 ∨ y = -1) ∧
@@ -26193,8 +25943,6 @@ theorem thm_11942 (A B C H : ℝ × ℝ × ℝ)
     (h₉ : H.1 = (5 / 2)) (h₁₀ : H.2.1 = 3) (h₁₁ : H.2.2 = (7 / 2)) :
     H = (5 / 2, 3, 7 / 2) := by sorry
 
-theorem thm_12003 : ∃ (perimeter : ℝ), perimeter = 290 / 3 ∧ ∃ (m n : ℕ), m.Coprime n ∧ perimeter = m / n := by sorry
-
 theorem thm_12073 (randy_initial_amount : ℝ) (spent_per_trip : ℝ) (trips_per_month : ℕ) (left_amount : ℝ)
   (h₀ : spent_per_trip = 2) (h₁ : trips_per_month = 4) (h₂ : left_amount = 104)
   (h₃ : randy_initial_amount - spent_per_trip * trips_per_month * 12 = left_amount) :
@@ -27176,10 +26924,6 @@ theorem thm_4120 :
   (∀ x y : ℤ, 2 ≤ x ∧ 2 ≤ y → ∃ n : ℕ, n < 2015 ∧ ∃ f : ℕ → ℤ, f n = x * y ∧ f n = x * y) →
   ∃ n : ℕ, n < 2015 ∧ ∃ f : ℕ → ℤ, f n = 2 * 2 ∧ f n = 2 * 2 := by sorry
 
-theorem thm_4238 (S : ℕ → ℚ) (h₀ : ∀ i, S (i + 1) = S i + (2 * i - 1) / (2 * i) * (2 * i + 1))
-  (h₁ : ∃ a b : ℕ, S 2009 = a / b ∧ Nat.Coprime a b ∧ b % 2 = 1) :
-  ∃ a b : ℕ, (a * b) / 10 = 401 ∧ a = 4010 ∧ b = 1 := by sorry
-
 theorem thm_4254 (a b c : ℝ) (h₀ : a + b = 2) (h₁ : a * b - c^2 = 1) :
   (∃ (t : ℕ), t = 1) ∧ (∃ (x y z : ℝ), x + y = 2 ∧ x * y - z^2 = 1) := by sorry
 
@@ -27330,18 +27074,6 @@ theorem thm_6833 (n j r : ℕ) (hn : n > 0) (hj : j > 0) (hr : r > 0) :
   let fj := fun n r => min (n * r) n + min (j / r) j;
   let gj := fun n r => min (n * r + 1) n + min (j / r + 1) j;
   fj n r ≤ n^2 + n ∧ gj n r ≥ n^2 + n → fj n r ≤ gj n r := by sorry
-
-theorem thm_6949 (n : ℕ) (h₀ : n ≥ 2) :
-    (∑ a in Finset.filter (fun a ↦ Nat.Coprime a n) (Finset.range n),
-      ∑ b in Finset.filter (fun b ↦ Nat.Coprime b n) (Finset.range n),
-        1 / (a * b)) = 1 / 2 →
-      (∑ a in Finset.filter (fun a ↦ Nat.Coprime a n) (Finset.range n),
-        1 / a) = 1 / 2 →
-        (∑ b in Finset.filter (fun b ↦ Nat.Coprime b n) (Finset.range n),
-          1 / b) = 1 / 2 →
-          (∑ a in Finset.filter (fun a ↦ Nat.Coprime a n) (Finset.range n),
-            ∑ b in Finset.filter (fun b ↦ Nat.Coprime b n) (Finset.range n),
-              1 / (a * b)) = 1 / 2 := by sorry
 
 theorem thm_6970 : ∀ (C : Sort) [h : Nonempty C], ∃ A : Prop, A ∧ (∀ B : Prop, B → A) := by sorry
 
@@ -28335,9 +28067,6 @@ theorem thm_26907 : ∀ (k : ℕ), ∀ (a : ℕ → ℕ), (∃ n : ℕ, (∀ i :
 
 theorem thm_27001 (a b c : ℝ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c) :
   ∃ D E F : ℝ, D > 0 ∧ E > 0 ∧ F > 0 := by sorry
-
-theorem thm_27033 (b : ℝ) (h₀ : b ∈ Set.Icc (-17) 17) :
-    (29 : ℝ) / 34 = 29 / 34 ∧ (∃ m n : ℕ, Nat.Coprime m n ∧ (m / n : ℝ) = 29 / 34) := by sorry
 
 theorem thm_27041 :
   let S := { p : ℝ × ℝ × ℝ | p.1 ≥ 0 ∧ p.2.1 ≥ 0 ∧ p.2.2 ≥ 0 ∧ p.1 + p.2.1 + p.2.2 = 1 };
@@ -29844,9 +29573,6 @@ theorem thm_25394 (x : ℝ) (h₀ : 0 < x) (h₁ : x < 1) (h₂ : 3 * x ^ 2 - 4 
   x = 3 / 4 → 1 / 6 = (1 - x) / 2 * x / 2 * (1 - x) / 2 * x / 2 * (1 - x) / 2 * x / 2 →
   (1 - x) / 2 * x / 2 * (1 - x) / 2 * x / 2 * (1 - x) / 2 * x / 2 = 1 / 64 := by sorry
 
-theorem thm_25410 (m n : ℕ) (h₀ : m.Coprime n) (h₁ : n > 0) (h₂ : m * n / 2 = 12) :
-  ∃ (m n : ℕ), m.Coprime n ∧ n > 0 ∧ m * n / 2 = 12 ∧ ∃ (Γ : ℕ), Γ = 60 := by sorry
-
 theorem thm_25456 (YZ XY : ℝ) (h₀ : YZ > 0) (h₁ : XY > 0) (h₂ : YZ = 30) (h₃ : XY / YZ = 4 / 3) : XY = 40 := by sorry
 
 theorem thm_25533 (x y : ℝ) (h₀ : x ≥ 0 ∧ x ≤ 20) (h₁ : y = 100 - 5 * x - 5 * x^2) :
@@ -29912,8 +29638,6 @@ theorem thm_26417 (n : ℕ) (h₀ : n > 0) :
   let d := 2;
   let moves := (n * (n + 1)) / 2;
   d ≤ moves → ∃ (m : ℕ), m ≥ d ∧ m ≤ moves := by sorry
-
-theorem thm_26434 (initial_amount : ℕ) (allowance : ℕ) (weeks : ℕ) (x : ℝ) (h₀ : initial_amount = 43) (h₁ : allowance = 10) (h₂ : weeks = 8) (h₃ : x / 100 * allowance * weeks + initial_amount = 83) : x = 50 := by sorry
 
 theorem thm_26576 (a b : ℕ) (h₀ : 0 < a ∧ 0 < b) (h₁ : a ≤ 1000 ∧ b ≤ 1000)
     (h₂ : ∀ k : ℕ, a % k = 0 ∧ b % k = 0 → k = 1) :
@@ -30060,10 +29784,6 @@ theorem thm_961 (x y : ℕ) (h₀ : x + y = 35) (h₁ : x ≤ 33) (h₂ : y ≤ 
   let cost := x * 5 / 100 + y * 10 / 100;
   let change := 35 - cost;
   change * 20 = 700 → change = 35 ∧ x = 33 ∧ y = 34 := by sorry
-
-theorem thm_1000 :
-    let S := { (x, y) | (x = 3 ∧ y = 3) ∨ (x = 3 ∧ y = 7) ∨ (x = 1 ∧ y = 7) };
-    S = {(1, 7)} ∪ {(3, 3)} ∪ {(3, 7)} := by sorry
 
 theorem thm_1054 (a b c d : ℝ) (h₀ : a ^ 2 + b ^ 2 = 1) (h₁ : c ^ 2 + d ^ 2 = 1)
   (h₂ : a * c + b * d = 0) (h₃ : a * d - b * c = 1) : a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2 = 2 := by sorry
@@ -31247,10 +30967,6 @@ theorem thm_18976 :
 theorem thm_19197 (a₁ a₇ : ℝ) (d : ℝ) (h₀ : a₁ = 7 / 9) (h₁ : a₁₃ = 4 / 5) (h₂ : a₇ = a₁ + 6 * d)
     (h₃ : a₁₃ = a₁ + 12 * d) : a₇ = 71 / 90 := by sorry
 
-theorem thm_19222 (m n : ℕ) (h₀ : 0 < m ∧ 0 < n) (h₁ : m.Coprime n)
-    (h₂ : ∃ (A B : Finset ℕ), A.card = 15 ∧ B.card = 15 ∧ ∀ a ∈ A, ∀ b ∈ B, a ≠ b ∧ a.gcd b = 1) :
-    m + n = 772 ↔ 772 = m + n := by sorry
-
 theorem thm_19305 (h₀ : ∀ a b c : ℝ, a ^ 2 + b ^ 2 = c ^ 2 ∧ a ≠ b ∧ a ≠ c ∧ b ≠ c →
   (∃ (x y z : ℝ), x ^ 2 + y ^ 2 = z ^ 2 ∧ x ≠ y ∧ x ≠ z ∧ y ≠ z)) :
   let s := 23;
@@ -32113,10 +31829,6 @@ theorem thm_3910 (x y : ℝ) (h₀ : x^2 * y = k) (h₁ : y = 10) (h₂ : x = 2)
 
 theorem thm_4058 : Real.log 3 / Real.log (1 / 3) = -1 := by sorry
 
-theorem thm_4073 (n : ℕ) :
-  ∀ F : ℝ → ℝ, F = (fun x => x) → ∀ P Q : ℝ → ℝ, P = (fun x => x ^ n) → Q = (fun x => x ^ n) →
-  (∀ x, F x = (1 / n) * (P x + Q x)) → (∀ x, F x = (1 / n) * (P x + Q x)) := by sorry
-
 theorem thm_4107 (n : ℕ) (P : ℤ → ℤ) (h₀ : ∀ x, P x = 2 * (x^3 + 2 * x) + 1) :
     (∀ x : ℤ, x ≥ 0 → P x = 2) → (∀ x : ℤ, x ≥ 0 → x = 2) → ∀ x : ℤ, x ≥ 0 → P x = 2 := by sorry
 
@@ -32932,11 +32644,6 @@ theorem thm_17842 (a b : ℝ) (h₀ : (a + b) / 2 = 23) (h₁ : (a - 5) / 2 = (b
 theorem thm_17845 (pie : ℚ) (h₀ : 6 / 7 = pie / 2) :
     pie = 12 / 7 := by sorry
 
-theorem thm_17853 (C : Set (ℝ × ℝ)) (l : ℝ × ℝ)
-    (h₀ : C = {(x, y) | y ^ 2 = 2 * x * l.fst - l.fst ^ 2 + l.snd ^ 2 - l.fst * l.snd}) (h₁ : l.fst ≠ 0)
-    (h₂ : ∀ (x y), (x, y) ∈ C ↔ y ^ 2 = 2 * x * l.fst - l.fst ^ 2 + l.snd ^ 2 - l.fst * l.snd) :
-    (∃ (l : ℝ × ℝ), l.fst ≠ 0 ∧ ∀ (x y), (x, y) ∈ C ↔ y ^ 2 = 2 * x * l.fst - l.fst ^ 2 + l.snd ^ 2 - l.fst * l.snd) := by sorry
-
 theorem thm_17874 (a b : ℝ) (h₀ : 0 ≤ a ∧ a < b ∧ b ≤ 1) :
   (∃ (S : ℕ → ℝ), ∀ (n : ℕ), S (n + 1) = S n + 1 / (n + 1) ∧ S 1 = 1 ∧ S 2 = 3 / 2 ∧ S 3 = 11 / 6 ∧ S 4 = 25 / 12 ∧ S 5 = 137 / 60 ∧ S 6 = 1807 / 720) →
   (∃ (a b : ℝ), 0 ≤ a ∧ a < b ∧ b ≤ 1) := by sorry
@@ -32978,9 +32685,6 @@ theorem thm_18616 (d : ℕ) (f : ℕ → ℕ) (h₀ : ∀ n, f n = n ^ 3 - 3 * n
   (h₁ : ∀ p, Nat.Prime p → ∀ n, f n % p = 0 → d = 1 ∨ d = 2) : ∀ p, Nat.Prime p → ∀ n, f n % p = 0 → d = 1 ∨ d = 2 := by sorry
 
 theorem thm_18727 (x : ℝ) (h₀ : 32 = x - (7/8)*x) : x = 256 := by sorry
-
-theorem thm_18816 (x : ℝ) (hx : x = 7) :
-    (∃ (m n : ℕ), Nat.Coprime m n ∧ (m / n : ℝ) = 182 / 125) := by sorry
 
 theorem thm_18862 :
   (∃ (p : ℝ), ∀ (h₀ : 0 ≤ p) (h₁ : p ≤ 1),
@@ -33373,9 +33077,6 @@ theorem thm_24860 (θ : ℝ) (h₀ : 0 < θ) (h₁ : θ < 60) (h₂ : (Real.tan 
 theorem thm_24868 (x y : ℝ) (h₀ : x + y - 2 ≤ 0) (h₁ : x - y ≤ 0) (h₂ : y ≤ 0) :
     2 * x + y - 2022 ≤ 2022 := by sorry
 
-theorem thm_24916 (x : ℝ) (h₀ : x = (304 ^ 5) / ((29.7) * (399) ^ 4)) :
-  x = 3 → (304 ^ 5) / ((29.7) * (399) ^ 4) = 3 := by sorry
-
 theorem thm_24933 (x : ℕ) :
   (1 + 2 + 3 + 4 + 5 + 6 + x) / 7 = 3 ∧ x ≤ 6 ∧ x ≠ 0 ∧ x ≠ 1 ∧ x ≠ 2 ∧ x ≠ 3 ∧ x ≠ 4 ∧ x ≠ 5 ∧ x ≠ 6 → x = 11 := by sorry
 
@@ -33517,10 +33218,6 @@ theorem thm_26909 (AB BC CA : ℝ) (h₀ : AB = 360) (h₁ : BC = 507) (h₂ : C
 
 theorem thm_26945 (a : ℕ → ℕ) : ∀ n : ℕ, a 1 = a 2 → a 1 = a 3 → a 1 = a 4 → a 1 = a 5 → a 1 = a 6 → a 1 = a 7 → a 1 = a 8 → a 1 = a 9 → a 1 = a 10 →
   ∃ m : ℕ, a 1 = a (m + 1) := by sorry
-
-theorem thm_27022 (k : ℕ) (h₀ : k > 0) :
-  (∃ (a : ℕ → ℤ), (∀ n, a n = (a (n - 1) + n ^ k) / n) ∧ (∀ n, a n ≠ 0) ∧ k - 2 ≡ 0 [MOD 3]) →
-  (∀ n, n > 0 → ∃ (a : ℕ → ℤ), (∀ n, a n = (a (n - 1) + n ^ k) / n) ∧ (∀ n, a n ≠ 0) ∧ k - 2 ≡ 0 [MOD 3]) := by sorry
 
 theorem thm_27076 (a b c d : ℕ) (h₀ : a < 2 * b ∧ b < 3 * c ∧ c < 4 * d) (h₁ : d < 100) :
     a < 2399 := by sorry
